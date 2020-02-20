@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- HTML
+HYPERTEXT
+texto que contem links para outro documentos.
+MAKUP
+texto conterá marcaçoes
+LANGUAGE
+para me comunicar de certa forma
+-->
+<html lang="en">
+
+<head>
+    <!--Aqui configurações da pagina-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Doe sangue! Doe vida</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/image/logo_partiudoarsangue_branco.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>D
+            <img width="100" height="100" src="/image/logo_partiudoarsangue_branco.png" alt="imagem de DOE">
+        E</h1>
+    <h2>A sua doação importa</h2>
+    <p>Até 3 vidas com 1 doação</p>
+    <p>Mais de 38.000 doação são necessarias todos os dias </p>
+    <button>Quero ajudar!</button>
+    </header>
+
+    <section class="form hide">
+        <h2>Entre na lista de doadores</h2>
+        <form action="/" method="POST">
+            <input type="text" 
+                    name="name"
+                    placeholder="Nome Completo">
+            <input type="text" 
+                    name="email"
+                    placeholder="E-mail">
+            <input type="text" 
+                    name="sangue"
+                    placeholder="Tipo sanguíneo">
+            <button>Quero ajudar!</button>
+        </form>
+    </section>
+
+    <main>
+        <h2>Ultimos <span>doadores</span></h2>
+        
+        <section class="doadores">
+
+            {% for doador in doadores %}
+                <div class="doador">
+                    <div class="sangue">{{doador.sangue}}</div>
+                    <p>{{doador.name}}</p>
+                </div>
+            {%endfor%}
+
+        </section>
+    </main>
+    <footer>Com &#x1F60D; SamuelMonai </footer>
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>
